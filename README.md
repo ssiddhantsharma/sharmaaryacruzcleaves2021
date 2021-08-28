@@ -7,6 +7,6 @@ This repository holds the code used in Sharma et al., 2021 Automated Exploration
 * The formose output can be explored interactively using: https://github.com/cbouy/mols2grid
 
 ### To reproduce the Figure 2(b) in the main text of the paper:
-Run ``` $python fig.py ``` or open the Jupyter Notebook [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ssiddhantsharma/sharmaaryacruzcleaves2021/HEAD)
+Run ``` python fig.py ``` or open the Jupyter Notebook [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ssiddhantsharma/sharmaaryacruzcleaves2021/HEAD)
 
 
