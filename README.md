@@ -10,5 +10,5 @@ This repository holds the code used in Sharma et al., 2021 Automated Exploration
 1) Make sure all the dependencies are installed on your machine as mentioned in ```requirements.txt```
 2) Run the Jupyter Notebook (.ipynb) for Figure 2 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ssiddhantsharma/sharmaaryacruzcleaves2021/HEAD)
 3) Execute ```$python Figure6_Generator.py``` for Figure 6.
-
+In Figure 2, we corrected for the ESI effects while converting to 'mass' by adding 1.007276.
 
