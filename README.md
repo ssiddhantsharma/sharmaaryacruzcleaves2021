@@ -1,5 +1,5 @@
 ### Figure Plotting Workflows
-This repository holds the code used in Sharma et al., 2021 Automated Exploration of Prebiotic Chemical Reaction Space: Progress And Perspectives.to generate the Figure 2 and Figure 6. Using this material, one can replicate the figures created in our paper. Questions and feedback welcome! Please send any comments or questions to: Siddhant Sharma (siddhaantsharma.ss@gmail.com)
+This repository holds the code used in [Sharma et al., 2021 Automated Exploration of Prebiotic Chemical Reaction Space: Progress And Perspectives](https://www.mdpi.com/2075-1729/11/11/1140/htm) to generate the Figure 2 and Figure 6. Using this material, one can replicate the figures created in our paper. Questions and feedback welcome! Please send any comments or questions to: Siddhant Sharma (siddhaantsharma.ss@gmail.com)
 
 ### Data Contents
 1. NegESI_39_Formose_reaction_MeOH_Dual spray_Calmix_MIDAS.csv - MS-Data Collected and Analyzed by Huan Chen: (https://nationalmaglab.org/component/maglabdata/?view=personnel&id=HuanChen)
