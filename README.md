@@ -23,6 +23,11 @@ Questions to Siddhant Sharma, siddhaantsharma.ss@gmail.com.
 pip install -r requirements.txt
 ```
 
+`pandas` is pinned below 3.0. The Figure 2 notebook fills a numeric column with
+an empty string, which pandas 3.0 rejects outright; earlier versions accept it.
+The pin keeps the published figure reproducible without editing the code that
+made it.
+
 **Figure 2** — run `Figure2.ipynb`, or open it directly in the browser:
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ssiddhantsharma/sharmaaryacruzcleaves2021/HEAD)
 

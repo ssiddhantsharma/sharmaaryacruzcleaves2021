@@ -1,8 +1,13 @@
 # Figure 2 (Jupyter notebook)
-pandas
+# pandas is pinned below 3.0: the notebook calls df.fillna('') on a float
+# column, which pandas 3.0 rejects with a TypeError. 2.3 and earlier accept it
+# with a FutureWarning. Pinning keeps the published figure reproducible without
+# altering the code that produced it.
+pandas<3
 numpy
 matplotlib
 rdkit
+notebook
 
 # Figure 6 additionally shells out to Open Babel, which is not a Python
 # package: install it separately, e.g. `conda install -c conda-forge openbabel`
