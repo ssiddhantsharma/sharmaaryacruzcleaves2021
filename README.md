@@ -1,14 +1,49 @@
-### Figure Plotting Workflows
-This repository holds the code used in [Sharma et al., 2021 Automated Exploration of Prebiotic Chemical Reaction Space: Progress And Perspectives](https://www.mdpi.com/2075-1729/11/11/1140/htm) to generate the Figure 2 and Figure 6. Using this material, one can replicate the figures created in our paper. Questions and feedback welcome! Please send any comments or questions to: Siddhant Sharma (siddhaantsharma.ss@gmail.com)
+# Figure plotting workflows
 
-### Data Contents
-1. NegESI_39_Formose_reaction_MeOH_Dual spray_Calmix_MIDAS.csv - MS-Data Collected and Analyzed by Huan Chen: (https://nationalmaglab.org/component/maglabdata/?view=personnel&id=HuanChen)
-2. formose_output.txt - Generated Using Open Source Graph-Grammar Tools. The formose output can be explored interactively using: https://github.com/cbouy/mols2grid
-3. Figure6_Data - Data For Gephi Plot.
+Code for Figures 2 and 6 of [Sharma, Arya, Cruz and Cleaves, *Automated
+Exploration of Prebiotic Chemical Reaction Space: Progress and Perspectives*,
+**Life** 2021, 11, 1140](https://www.mdpi.com/2075-1729/11/11/1140/htm).
 
-### To reproduce the Figure 2 and Figure 6 in the main text of the paper:
-1) Make sure all the dependencies are installed on your machine as mentioned in ```requirements.txt```
-2) Run the Jupyter Notebook (.ipynb) for Figure 2 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ssiddhantsharma/sharmaaryacruzcleaves2021/HEAD)
-3) Execute ```$python Figure6_Generator.py``` for Figure 6.
-In Figure 2, we corrected for the ESI effects while converting to 'mass' by adding 1.007276.
+Questions to Siddhant Sharma, siddhaantsharma.ss@gmail.com.
 
+## Contents
+
+| File | Contents |
+|---|---|
+| `Figure2.ipynb` | Mirror plot: FT-ICR-MS spectrum against the computed formose network |
+| `Figure6_Generator.py` | Renders molecule SVGs and the node table for the Gephi plot |
+| `39_Formose reaction_MeOH.csv` | FT-ICR-MS peak list, collected and analysed by [Huan Chen](https://nationalmaglab.org/component/maglabdata/?view=personnel&id=HuanChen) at the National High Magnetic Field Laboratory |
+| `formose_output.txt` | Formose network products, generated with open-source graph-grammar tools |
+| `Figure6_Data.csv` | Node table for Figure 6: SMILES and type |
+| `formose_mirror_plot.png` | Figure 2 as published |
+
+## Reproducing the figures
+
+```bash
+pip install -r requirements.txt
+```
+
+**Figure 2** — run `Figure2.ipynb`, or open it directly in the browser:
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ssiddhantsharma/sharmaaryacruzcleaves2021/HEAD)
+
+The spectra are negative-ESI, so the measured *m/z* is that of the [M−H]⁻ ion.
+The notebook adds 1.007276 to recover the neutral mass before comparing with
+the computed network.
+
+**Figure 6** — needs Open Babel on the PATH, which is not a Python package:
+
+```bash
+conda install -c conda-forge openbabel   # or: apt install openbabel
+python Figure6_Generator.py
+```
+
+This writes one SVG per molecule and an `imagen.csv` mapping table. Both are
+inputs to [Gephi](https://gephi.org), where the network layout itself was made;
+the figure is not produced end-to-end by this script.
+
+The formose network can also be browsed interactively with
+[mols2grid](https://github.com/cbouy/mols2grid).
+
+## Licence
+
+MIT, see `LICENSE`.

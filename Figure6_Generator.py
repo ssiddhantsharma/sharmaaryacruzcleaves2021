@@ -8,11 +8,11 @@ import os.path
 import numpy as np
 import matplotlib.colors as mcolors
 
-molecules = open('type_1_gephi.csv','r')
+molecules = open('Figure6_Data.csv', 'r')
 lines = molecules.readlines()
 counter = 0
 #print('lines'+str(lines))
-with open('imagen.csv', 'a') as the_file:
+with open('imagen.csv', 'w') as the_file:
 	the_file.write("Id,image"+'\n') 	
 	for line in lines[1:]:
 		counter +=1

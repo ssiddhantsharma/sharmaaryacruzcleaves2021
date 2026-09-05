@@ -1,0 +1,9 @@
+# Figure 2 (Jupyter notebook)
+pandas
+numpy
+matplotlib
+rdkit
+
+# Figure 6 additionally shells out to Open Babel, which is not a Python
+# package: install it separately, e.g. `conda install -c conda-forge openbabel`
+# or `apt install openbabel`.
